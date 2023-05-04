@@ -1,0 +1,46 @@
+.container-mision {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icono-mision {
+  font-size: 120px;
+  color: violet;
+}
+.body-mision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body-mision h2 {
+  color: violet;
+}
+.body-mision p {
+  text-align: justify;
+  text-align: center;
+}
+
+/*ESTILOS DEL COMPONENTE VALORES*/
+.container-valores {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icono-valores {
+  font-size: 120px;
+  color: violet;
+}
+.body-valores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body-valores h2 {
+  color: violet;
+}
+.body-valores p {
+  text-align: justify;
+  text-align: center;
+}

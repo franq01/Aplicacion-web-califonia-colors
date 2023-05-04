@@ -1,0 +1,23 @@
+.container-vision {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icono-vision {
+  font-size: 120px;
+  color: violet;
+}
+.body-vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body-vision h2 {
+  color: violet;
+}
+.body-vision p {
+  text-align: justify;
+  text-align: center;
+}
