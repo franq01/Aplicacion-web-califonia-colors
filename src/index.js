@@ -12,6 +12,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Admin } from "./Admin";
+import { FirebaseAppProvider } from "reactfire"; /*se importa el provedor de firebase para poder hacer uso de los servicios que nos ofrece*/
+import firebaseConfig from "./firebase-config"; /*Se importa la configuracion de firebase que esta en el archivo firebase-config.js*/
+import { CardsServicios } from "./Cards-servicios";
+import { ScreenHojalateria } from "./ScreenHojalateria";
 
 /*Creando rutas con react-router-dom*/
 export const router = createBrowserRouter([
@@ -23,13 +27,19 @@ export const router = createBrowserRouter([
     path: "/admin",
     element: <Admin />,
   },
+  {
+    path: "/hojalateria",
+    element: <ScreenHojalateria />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </FirebaseAppProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

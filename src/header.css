@@ -1,0 +1,56 @@
+.container-padre {
+  margin-top: 30px;
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+.logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.logo .c {
+  color: rgb(69, 1, 69);
+  font-size: 23px;
+  font-family: cursive;
+}
+.logo .f {
+  color: green;
+  font-size: 23px;
+  font-family: cursive;
+}
+.logo .i {
+  color: red;
+  font-size: 23px;
+  font-family: cursive;
+}
+.container-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  background-color: violet;
+  border-radius: 10px;
+}
+.link-explorar {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+.link-explorar:hover {
+  color: black;
+}
+.container-about {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-about h2 {
+  color: violet;
+  font-family: cursive;
+}
+.container-about p {
+  text-align: justify;
+}

@@ -1,0 +1,9 @@
+.container-promociones {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-promociones h2 {
+  color: violet;
+}

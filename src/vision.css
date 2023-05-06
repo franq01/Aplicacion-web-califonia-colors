@@ -8,6 +8,19 @@
 .icono-vision {
   font-size: 120px;
   color: violet;
+  transform: translate(0px);
+  animation: float 6s ease-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .body-vision {
   display: flex;

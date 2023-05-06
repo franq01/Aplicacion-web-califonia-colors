@@ -1,18 +1,9 @@
 import { useState } from "react";
 import "./admin.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { router } from "./index";
 export function Admin() {
-  let [producto, setProdcuto] = useState("");
-  let [precio, setPrecio] = useState("");
+  let [usuario, setUsuario] = useState("");
+  let [password, setPassword] = useState("");
   const inputs = document.querySelectorAll("#inputs");
   const alerta = document.getElementById("alerta");
   return (
@@ -20,14 +11,14 @@ export function Admin() {
       <div className="container-formulario">
         <div className="body-formulario">
           <h4>Inicia sesion como administrador</h4>
-          <label>Correo electronico:</label>
+          <label>Nombre de usuario:</label>
           <input
             type="text"
             id="inputs"
             className="inputs"
-            placeholder="Gmail"
+            placeholder="Usuario"
             onChange={(e) => {
-              setProdcuto(e.target.value);
+              setUsuario(e.target.value);
             }}
           ></input>
           <label>Ingresa tu contraseña:</label>
@@ -37,13 +28,13 @@ export function Admin() {
             className="inputs"
             placeholder="Contraseña"
             onChange={(e) => {
-              setPrecio(e.target.value);
+              setPassword(e.target.value);
             }}
           ></input>
           <button
-            className="btn btn-warning insertar"
+            className="insertar"
             onClick={() => {
-              if (producto && precio) {
+              if (usuario && password) {
                 inputs.forEach((i) => {
                   i.value = "";
                 });
@@ -51,7 +42,7 @@ export function Admin() {
                       <p>Se agrego correctamente el producto</p>
                       `;
                 alerta.style.color = "green";
-              } else if (producto == "" || precio == "") {
+              } else if (usuario == "" || password == "") {
                 alerta.innerHTML = `
                       <p>Verifica que los campos esten llenos</p>
                       `;
