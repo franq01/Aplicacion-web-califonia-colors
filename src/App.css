@@ -4,7 +4,7 @@ body {
 
 nav a {
   text-decoration: none;
-  color: violet;
+  color: blue;
 }
 
 .container-grid {
@@ -31,7 +31,7 @@ nav a {
   gap: 5px;
 }
 .container-nosotros h2 {
-  color: violet;
+  color: blue;
 }
 .container-nosotros p {
   text-align: justify;
@@ -43,12 +43,12 @@ nav a {
 }
 .promociones h1 {
   text-align: center;
-  color: violet;
+  color: blue;
 }
 .funcionalidades {
   text-align: center;
   margin-top: 60px;
-  color: violet;
+  color: blue;
 }
 .container-servicios {
   margin-top: 40px;

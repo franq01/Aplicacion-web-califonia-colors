@@ -1,4 +1,12 @@
 import { Cards } from "./Cards-servicios";
+import cristales from "./assets/cristales.jpg";
+import bujes from "./assets/bujes.jpg";
+import pernos from "./assets/pernos.jpg";
+import chasis from "./assets/chasis.jpg";
+import chapas from "./assets/chapas.jpg";
+import manijas from "./assets/manijas.jpg";
+import elevadores from "./assets/elevadores.jpg";
+import secciones from "./assets/seccionesdañadas.jpg";
 export const ScreenHojalateria = () => {
   return (
     <body>
@@ -16,6 +24,7 @@ export const ScreenHojalateria = () => {
         }}
       >
         <Cards
+          imagenServicio={cristales}
           servicio={"Cambio de cristales"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"
@@ -23,6 +32,7 @@ export const ScreenHojalateria = () => {
           funcion={() => {}}
         />
         <Cards
+          imagenServicio={bujes}
           servicio={"Cambio de bujes"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"
@@ -30,6 +40,7 @@ export const ScreenHojalateria = () => {
           funcion={() => {}}
         />
         <Cards
+          imagenServicio={pernos}
           servicio={"Pernos de puertas"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"
@@ -37,6 +48,7 @@ export const ScreenHojalateria = () => {
           funcion={() => {}}
         />
         <Cards
+          imagenServicio={chasis}
           servicio={"Acorazado de chasis"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"
@@ -44,6 +56,7 @@ export const ScreenHojalateria = () => {
           funcion={() => {}}
         />
         <Cards
+          imagenServicio={chapas}
           servicio={"Reparacion de chapas"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"
@@ -51,6 +64,7 @@ export const ScreenHojalateria = () => {
           funcion={() => {}}
         />
         <Cards
+          imagenServicio={manijas}
           servicio={"Reparacion de manijas"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"
@@ -58,6 +72,7 @@ export const ScreenHojalateria = () => {
           funcion={() => {}}
         />
         <Cards
+          imagenServicio={elevadores}
           servicio={"Elevadores de puertas"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"
@@ -65,6 +80,7 @@ export const ScreenHojalateria = () => {
           funcion={() => {}}
         />
         <Cards
+          imagenServicio={secciones}
           servicio={"Cambio de secciones dañadas"}
           descripcion={
             "Ofrecemos un servicio muy amplio de pintura para todo tipo de auto"

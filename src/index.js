@@ -14,9 +14,8 @@ import {
 import { Admin } from "./Admin";
 import { FirebaseAppProvider } from "reactfire"; /*se importa el provedor de firebase para poder hacer uso de los servicios que nos ofrece*/
 import firebaseConfig from "./firebase-config"; /*Se importa la configuracion de firebase que esta en el archivo firebase-config.js*/
-import { CardsServicios } from "./Cards-servicios";
 import { ScreenHojalateria } from "./ScreenHojalateria";
-
+import { AgregarPromociones } from "./AgregarPromociones";
 /*Creando rutas con react-router-dom*/
 export const router = createBrowserRouter([
   {
@@ -30,6 +29,14 @@ export const router = createBrowserRouter([
   {
     path: "/hojalateria",
     element: <ScreenHojalateria />,
+  },
+  {
+    path: "/agregar",
+    element: <AgregarPromociones />,
+  },
+  {
+    path: "/inicio",
+    element: <App />,
   },
 ]);
 

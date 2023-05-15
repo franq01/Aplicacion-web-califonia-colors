@@ -11,7 +11,7 @@
   gap: 20px;
 }
 .logo .c {
-  color: rgb(69, 1, 69);
+  color: blue;
   font-size: 23px;
   font-family: cursive;
 }
@@ -30,7 +30,7 @@
   display: flex;
   justify-content: center;
   width: 50%;
-  background-color: violet;
+  background-color: blue;
   border-radius: 10px;
 }
 .link-explorar {
@@ -48,9 +48,10 @@
   align-items: center;
 }
 .container-about h2 {
-  color: violet;
+  color: blue;
   font-family: cursive;
 }
 .container-about p {
   text-align: justify;
+  color: blue;
 }

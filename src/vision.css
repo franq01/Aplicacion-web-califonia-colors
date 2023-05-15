@@ -7,7 +7,7 @@
 }
 .icono-vision {
   font-size: 120px;
-  color: violet;
+  color: blue;
   transform: translate(0px);
   animation: float 6s ease-out infinite;
 }
@@ -28,9 +28,10 @@
   align-items: center;
 }
 .body-vision h2 {
-  color: violet;
+  color: blue;
 }
 .body-vision p {
   text-align: justify;
   text-align: center;
+  color: blue;
 }

@@ -1,61 +1,85 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./admin.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  BrowserRouter as Router,
+  Link,
+  useNavigate,
+  Navigate,
+} from "react-router-dom";
 export function Admin() {
   let [usuario, setUsuario] = useState("");
   let [password, setPassword] = useState("");
-  const inputs = document.querySelectorAll("#inputs");
-  const alerta = document.getElementById("alerta");
+  let inputs = useRef();
+  /*se crea una referencia del hook useNavigete */
+  const navigate = useNavigate();
+  const handleEmail = (e) => {
+    setUsuario(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
   return (
     <body>
-      <div className="container-formulario">
-        <div className="body-formulario">
-          <h4>Inicia sesion como administrador</h4>
-          <label>Nombre de usuario:</label>
-          <input
-            type="text"
-            id="inputs"
-            className="inputs"
-            placeholder="Usuario"
-            onChange={(e) => {
-              setUsuario(e.target.value);
-            }}
-          ></input>
-          <label>Ingresa tu contraseña:</label>
-          <input
-            type="password"
-            id="inputs"
-            className="inputs"
-            placeholder="Contraseña"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          ></input>
-          <button
-            className="insertar"
-            onClick={() => {
-              if (usuario && password) {
-                inputs.forEach((i) => {
-                  i.value = "";
-                });
-                alerta.innerHTML = `
-                      <p>Se agrego correctamente el producto</p>
-                      `;
-                alerta.style.color = "green";
-              } else if (usuario == "" || password == "") {
-                alerta.innerHTML = `
-                      <p>Verifica que los campos esten llenos</p>
-                      `;
+      <div className="night">
+        <div className="surface"></div>
+        <div className="car"></div>
+        <section>
+          <div className="form-box">
+            <div className="form-value">
+              <form action="">
+                <h2>Login</h2>
+                <div className="inputbox">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <input
+                    defaultValue={""}
+                    ref={inputs}
+                    onChange={handleEmail}
+                    type="email"
+                    required
+                  />
 
-                alerta.style.color = "red";
-              }
-            }}
-          >
-            Ingresar
-          </button>
-          <div id="alerta"></div>
-        </div>
+                  <label for="">correo</label>
+                </div>
+                <div className="inputbox">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                  <input
+                    defaultValue={""}
+                    onChange={handlePassword}
+                    type="password"
+                    required
+                  />
+                  <label for="">contraseña</label>
+                </div>
+
+                <button
+                  onClick={() => {
+                    if (usuario && password) {
+                      navigate("/agregar");
+                      inputs.current.value = "";
+                    }
+                  }}
+                >
+                  Iniciar sesion
+                </button>
+                <div className="register">
+                  <p></p>
+                </div>
+              </form>
+              <button
+                onClick={() => {
+                  navigate("/inicio");
+                }}
+              >
+                inicio
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </body>
   );
 }
+
+export const Datos = [];
+console.log(Datos);

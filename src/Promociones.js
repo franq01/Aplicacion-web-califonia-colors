@@ -1,16 +1,23 @@
 import "./Promociones.css";
-export const Promociones = ({ imagen, promocion, descripcion }) => {
-  return (
-    <div className="container-promociones" id="promociones">
-      <img id="imagen" src={imagen} alt="" />
-      <div className="body-promociones">
-        <h2 id="servicio">
-          {promociones.length <= 0 ? "no hay promociones aun" : promocion}
-        </h2>
-        <p id="descripcion">{descripcion}</p>
+import { promociones } from "./AgregarPromociones";
+export const Promociones = () => {
+  const promocionesRender = promociones.map((e) => (
+    <div className="card" style={{ width: "18rem" }}>
+      <img className="card-img-top img" src={e.imagen} />
+      <div className="card-body">
+        <h5 className="card-title">{e.titulo}</h5>
+        <p className="card-text">{e.descripcion}</p>
+        <p>{e.precio}</p>
+        <button className="btn-promo">Informacion</button>
       </div>
     </div>
+  ));
+
+  return promocionesRender.length > 0 ? (
+    <div className="container-promociones">{promocionesRender}</div>
+  ) : (
+    <h1 style={{ color: "blue", textAlign: "center" }}>
+      ¡No hay promociones disponibles!
+    </h1>
   );
 };
-
-const promociones = [];
